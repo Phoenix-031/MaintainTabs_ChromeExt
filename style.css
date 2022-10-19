@@ -18,6 +18,7 @@ body{
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    color: floralwhite;
 }
 
 .count-div {
@@ -78,6 +79,21 @@ li {
 }
 
 .takebtn {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 0.8rem;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background-color: #5a5b63;
+}
+
+.downjson {
     padding: 10px 20px;
     margin-bottom: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;

@@ -14,11 +14,43 @@ window.onload = () =>{
             jsob.url = response[tab].url
             jsob.tabid = response[tab].id
             jsob.thumburl = `https://img.youtube.com/vi/${String(response[tab].url.split("?")[1]).split("=")[1]}/maxresdefault.jpg`
-            // https://img.youtube.com/vi/VID_ID/maxresdefault.jpg
             getAllTabs.push(jsob)
         }
 
         console.log(getAllTabs)
+
+        const download = (filename,text) =>{
+            const ele = document.createElement('a')
+            // console.log(text)
+
+            let urls = []
+            for(let i=0;i<text.length;i++) {
+                urls.push(`${text[i].url}\n`)
+            }
+
+            console.log(urls)
+            let blob = new Blob([urls], {
+                type: "text/json;charset=utf-8;",
+            });
+  
+            const url = URL.createObjectURL(blob) 
+
+            ele.setAttribute('href',url)
+            ele.setAttribute('download',filename)
+
+            ele.style.display = 'none'
+            document.body.appendChild(ele)
+
+            ele.click()
+
+            document.body.removeChild(ele)
+            
+        }
+
+        document.querySelector('.downjson').addEventListener('click',()=>{
+                download("tabs.txt",getAllTabs)
+                // console.log(getAllTabs)
+        })
 
         document.querySelector('.count-div').innerHTML = `Count: ${getAllTabs.length}`
 
@@ -60,7 +92,6 @@ window.onload = () =>{
                 window.close()
             })
 
-
             
             const btndiv = document.createElement('div')
 
@@ -79,7 +110,3 @@ window.onload = () =>{
         
     })
 }
-
-// const clickregistered = () =>{
-//     console.log("clicked")
-// }

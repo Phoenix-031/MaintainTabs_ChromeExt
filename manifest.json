@@ -1,0 +1,19 @@
+{
+    "manifest_version":3,
+    "name":"List open tabs",
+    "description":"Lists all open tabs in browser cuz why not!",
+    "version":"1.0.0",
+    "short_name": "OTAB",
+    "author" : "Debayan",
+    "permissions":[
+        "webRequest",
+        "tabs"
+    ],
+    "background":{
+        "service_worker":"background.js"
+    },
+    "action":{
+        "default_popup":"popup.html",
+        "default_title" : "List Tabs"
+    }
+}

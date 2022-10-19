@@ -1,6 +1,6 @@
 # Contribution Guidelines
 
-_Welcome hackers it is really **awesome** have you here! Before start contributing with this project make sure to read the contributing file and 
+_Welcome hackers it is really **awesome** to have you here! Before starting to contribute to this project make sure to read the contributing file and 
 [Code Of Conduct](https://github.com/Phoenix-031/MaintainTabs_ChromeExt/blob/master/CODE_OF_CONDUCT.md) properly :), it is really important to make this inclusive and open to everyone, otherwise, it would not be awesome to have you here_
 
 ## Submitting a pull request

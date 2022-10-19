@@ -33,6 +33,7 @@ window.onload = () =>{
             getAllTabs[i].url.split("?")[1] !== undefined ? utubeicon.src = getAllTabs[i].thumburl : utubeicon.classList.add('hide')
 
             const anchor = document.createElement('a')
+            anchor.classList.add('anchor-info')
             anchor.href = getAllTabs[i].url
             anchor.target = '_blank'
             getAllTabs[i].tabname === "" ? anchor.innerHTML = getAllTabs[i].url : anchor.innerHTML = getAllTabs[i].tabname

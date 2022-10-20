@@ -15,5 +15,11 @@
     "action":{
         "default_popup":"../popup.html",
         "default_title" : "List Tabs"
+    },
+    "icons" :{
+        "16" :"./images/tab-16.png",
+        "32" :"./images/tab-32.png",
+        "128" :"./images/tab-128.png",
+        "64" : "./images/tab-64.png"
     }
 }

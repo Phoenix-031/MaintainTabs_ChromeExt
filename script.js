@@ -13,8 +13,9 @@ window.onload = () =>{
             response[tab].title === 'Extensions' ? jsob.tabname = "" : jsob.tabname = response[tab].title
             jsob.url = response[tab].url
             jsob.tabid = response[tab].id
-            jsob.thumburl = `https://img.youtube.com/vi/${String(response[tab].url.split("?")[1]).split("=")[1]}/maxresdefault.jpg`
+            // jsob.thumburl = `https://img.youtube.com/vi/${String(response[tab].url.split("?")[1]).split("=")[1]}/maxresdefault.jpg`
             jsob.ico = response[tab].favIconUrl
+            String(response[tab].url.split("?")[1])[0] === 'v' ? jsob.thumburl = `https://img.youtube.com/vi/${String(response[tab].url.split("?")[1]).split("=")[1]}/maxresdefault.jpg` : jsob.thumburl = ""
             getAllTabs.push(jsob)
         }
 
@@ -64,7 +65,7 @@ window.onload = () =>{
             const utubeicon = document.createElement('img')
             utubeicon.classList.add('utube-icon')
 
-            if(String(getAllTabs[i].url.split("?")[1])[0] === 'v') {
+            if(getAllTabs[i].thumburl !== "") {
                 utubeicon.src = getAllTabs[i].thumburl
                 infodiv.appendChild(utubeicon)
             } else {
@@ -113,7 +114,6 @@ window.onload = () =>{
 
             btndiv.appendChild(takebtn)
 
-            // infodiv.appendChild(utubeicon)
             infodiv.appendChild(anchor)
             infodiv.appendChild(cross)
             tablist.appendChild(infodiv)

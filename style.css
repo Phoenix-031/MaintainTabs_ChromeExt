@@ -68,6 +68,14 @@ li {
     border-radius: 15px;
 }
 
+.favicon-icon {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 15px;
+}
+
 .btndiv {
     flex:1;
     padding: 20px;

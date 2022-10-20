@@ -14,6 +14,7 @@ window.onload = () =>{
             jsob.url = response[tab].url
             jsob.tabid = response[tab].id
             jsob.thumburl = `https://img.youtube.com/vi/${String(response[tab].url.split("?")[1]).split("=")[1]}/maxresdefault.jpg`
+            jsob.ico = response[tab].favIconUrl
             getAllTabs.push(jsob)
         }
 
@@ -62,12 +63,25 @@ window.onload = () =>{
 
             const utubeicon = document.createElement('img')
             utubeicon.classList.add('utube-icon')
-            getAllTabs[i].url.split("?")[1] !== undefined ? utubeicon.src = getAllTabs[i].thumburl : utubeicon.classList.add('hide')
+
+            if(String(getAllTabs[i].url.split("?")[1])[0] === 'v') {
+                utubeicon.src = getAllTabs[i].thumburl
+                infodiv.appendChild(utubeicon)
+            } else {
+                const favicon = document.createElement('img')
+                utubeicon.classList.toggle('hide')
+                favicon.classList.add('favicon-icon')
+                favicon.src = getAllTabs[i].ico
+                infodiv.appendChild(favicon)
+                
+            }
+            
 
             const anchor = document.createElement('a')
             anchor.classList.add('anchor-info')
             anchor.href = getAllTabs[i].url
             anchor.target = '_blank'
+
             getAllTabs[i].tabname === "" ? anchor.innerHTML = getAllTabs[i].url : anchor.innerHTML = getAllTabs[i].tabname
 
             const cross = document.createElement('span')
@@ -99,7 +113,7 @@ window.onload = () =>{
 
             btndiv.appendChild(takebtn)
 
-            infodiv.appendChild(utubeicon)
+            // infodiv.appendChild(utubeicon)
             infodiv.appendChild(anchor)
             infodiv.appendChild(cross)
             tablist.appendChild(infodiv)

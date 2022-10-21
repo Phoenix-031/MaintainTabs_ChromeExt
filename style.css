@@ -9,8 +9,22 @@ body{
     width: 600px;
     padding: 20px;
     max-height: 300px;
-    overflow-y: scroll;
-    background-color: #27242c;
+    background-color: #b181ff;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+::-webkit-scrollbar-track {
+    background-color: #9350ff;
+}
+::-webkit-scrollbar-thumb{
+    background: #4001a5;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: #210057;
 }
 
 .top-content {
@@ -21,12 +35,6 @@ body{
     color: floralwhite;
 }
 
-.count-div {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
 ul{
     list-style: none;
     margin: 20px 0;
@@ -34,7 +42,7 @@ ul{
 
 li {
     padding: 10px;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.47) 0px 3px 8px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
     border-radius: 15px;
@@ -45,6 +53,8 @@ li {
     gap: 1rem;
     flex-direction: column;
     margin: 1rem 0;
+    background-color: #6102fa;
+
 }
 
 .info-div {
@@ -55,6 +65,7 @@ li {
     gap: 1rem;
     width: 100%;
     flex: 1;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .anchor-info {
@@ -95,10 +106,10 @@ li {
     outline: none;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) -1px 4px 1px 0px;
     transition: all 0.3s ease;
     cursor: pointer;
-    background-color: #5a5b63;
+    background-color: rgba(249, 171, 0);
 }
 
 .downjson {
@@ -110,15 +121,22 @@ li {
     outline: none;
     font-weight: bold;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) -1px 4px 1px 0px;
     transition: all 0.3s ease;
     cursor: pointer;
-    background-color: #5a5b63;
+    background-color:rgb(255, 147, 31);
 }
 
 .takebtn:hover{
-    background-color: rgb(141, 147, 152);
+    background-color: rgba(255, 174, 0, 0.85);
     color: floralwhite;
+    font-size: medium;
+}
+
+.downjson:hover{
+    background-color: rgba(255, 147, 31, 0.85);
+    color: rgb(255, 242, 217);
+    font-size: larger;
 }
 
 .thumnail {
@@ -139,4 +157,27 @@ li {
 
 .cross {
     align-self: flex-end;
+}
+
+
+.fa-circle-xmark{
+    color:rgb(255, 25, 25);
+}
+
+.anchor-info{
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.count-div, .top-content{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(2, 0, 126);
+    font-weight: bold;
+    font-size: small;
+}
+
+.count-div{
+    font-size: medium;
 }

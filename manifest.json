@@ -1,7 +1,7 @@
 {
     "manifest_version":3,
     "name":"List open tabs",
-    "description":"Lists all open tabs in browser cuz why not!",
+    "description":"Lists all open tabs in browser cuz why not! Also button to close them",
     "version":"1.0.0",
     "short_name": "OTAB",
     "author" : "Debayan",

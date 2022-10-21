@@ -6,7 +6,7 @@ window.onload = () =>{
 
     chrome.runtime.sendMessage({type: "getTabs"}, function (response){
 
-        console.log(response)
+
 
         for(let tab in response) {
             let jsob = {}
@@ -19,7 +19,6 @@ window.onload = () =>{
             getAllTabs.push(jsob)
         }
 
-        console.log(getAllTabs)
 
         const download = (filename,text) =>{
             const ele = document.createElement('a')
@@ -30,7 +29,6 @@ window.onload = () =>{
                 urls.push(`${text[i].url}\n`)
             }
 
-            console.log(urls)
             let blob = new Blob([urls], {
                 type: "text/json;charset=utf-8;",
             });
@@ -87,7 +85,7 @@ window.onload = () =>{
 
             const cross = document.createElement('span')
             cross.classList.add('cross')
-            cross.innerHTML = '<i class="fa-regular fa-circle-xmark"></i>'
+            cross.innerHTML = '<i class="fa-regular fa-circle-xmark red"></i>'
 
 
             const takebtn = document.createElement('button')

@@ -85,7 +85,7 @@ window.onload = () =>{
 
             const cross = document.createElement('span')
             cross.classList.add('cross')
-            cross.innerHTML = '<i class="fa-regular fa-circle-xmark red"></i>'
+            cross.innerHTML = '<i class="fa-regular fa-circle-xmark" style="color: #27A691"</i>'
 
 
             const takebtn = document.createElement('button')

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Enriqueta:wght@400;500;600&family=Poppins:ital,wght@0,300;0,400;0,500;1,400&family=Roboto+Slab:wght@300;400;500;600&family=Roboto:wght@300;400;500;700;900&family=Ubuntu:wght@400;500&family=Urbanist:wght@300;400;500;600;700;800&family=Varela&display=swap');
+
 *{
     margin: 0;
     padding:0;
@@ -9,18 +11,24 @@ body{
     width: 600px;
     padding: 20px;
     max-height: 300px;
-    background-color: #b181ff;
+    background-color: #162643;
     border-radius: 5px;
 }
 
+.textheader {
+    color: floralwhite;
+    font-family : Poppins;
+    font-size: 1rem;  
+}
+
 ::-webkit-scrollbar {
-    width: 16px;
+    width: 0.5rem;
 }
 ::-webkit-scrollbar-track {
-    background-color: #9350ff;
+    background-color: #162643;
 }
 ::-webkit-scrollbar-thumb{
-    background: #4001a5;
+    background: #243350;
     border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover{
@@ -53,7 +61,7 @@ li {
     gap: 1rem;
     flex-direction: column;
     margin: 1rem 0;
-    background-color: #6102fa;
+    background-color: #243350;
 
 }
 
@@ -100,7 +108,7 @@ li {
 .takebtn {
     padding: 10px 20px;
     margin-bottom: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Poppins;
     font-size: 0.8rem;
     border: none;
     outline: none;
@@ -109,13 +117,13 @@ li {
     box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) -1px 4px 1px 0px;
     transition: all 0.3s ease;
     cursor: pointer;
-    background-color: rgba(249, 171, 0);
+    background-color: '#27A691';
 }
 
 .downjson {
     padding: 10px 20px;
     margin-bottom: 10px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Poppins;
     font-size: 0.8rem;
     border: none;
     outline: none;
@@ -127,16 +135,14 @@ li {
     background-color:rgb(255, 147, 31);
 }
 
-.takebtn:hover{
-    background-color: rgba(255, 174, 0, 0.85);
-    color: floralwhite;
-    font-size: medium;
+.downjson:hover {
+    background-color: #27A691;
+    color: black;
 }
 
-.downjson:hover{
-    background-color: rgba(255, 147, 31, 0.85);
-    color: rgb(255, 242, 217);
-    font-size: larger;
+.takebtn:hover{
+    background-color: '#243350';
+    color: black;
 }
 
 .thumnail {
@@ -156,7 +162,8 @@ li {
 }
 
 .cross {
-    align-self: flex-end;
+    align-self: flex-start;
+    color: floralwhite;
 }
 
 
@@ -168,22 +175,16 @@ li {
     pointer-events: none;
     cursor: default;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Poppins;
 }
 
 .count-div, .top-content{
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(2, 0, 126);
+    font-family: Roboto;
+    color: floralwhite;
     font-weight: bold;
     font-size: small;
 }
 
 .count-div{
     font-size: medium;
-}
-
-
-a{
-    background-color: ;
-    text-decoration: ;
 }
